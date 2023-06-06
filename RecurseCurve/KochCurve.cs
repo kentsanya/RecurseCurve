@@ -54,8 +54,10 @@ namespace RecurseCurve
 
         private void btnStart_Click(object sender, EventArgs e)
         {
+
             depth = int.Parse(tbDeth.Text);
             length = int.Parse(tbLength.Text);
+            this.Invalidate();
         }
     }
 }

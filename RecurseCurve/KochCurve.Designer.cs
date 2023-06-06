@@ -28,36 +28,66 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnStart = new Button();
+            kochCurveTab = new TabControl();
+            tabPageKochCurve = new TabPage();
+            tabPageDragonCurve = new TabPage();
             groupBox2 = new GroupBox();
             tbLength = new TextBox();
+            btnStart = new Button();
             label2 = new Label();
             label1 = new Label();
             tbDeth = new TextBox();
+            tabPageSierpinskiCurve = new TabPage();
+            groupBox1 = new GroupBox();
+            kochCurveTab.SuspendLayout();
+            tabPageKochCurve.SuspendLayout();
             groupBox2.SuspendLayout();
+            tabPageSierpinskiCurve.SuspendLayout();
             SuspendLayout();
             // 
-            // btnStart
+            // kochCurveTab
             // 
-            btnStart.Location = new Point(630, 396);
-            btnStart.Name = "btnStart";
-            btnStart.Size = new Size(94, 34);
-            btnStart.TabIndex = 0;
-            btnStart.Text = "Start";
-            btnStart.TextImageRelation = TextImageRelation.TextBeforeImage;
-            btnStart.UseVisualStyleBackColor = true;
-            btnStart.Click += btnStart_Click;
+            kochCurveTab.Controls.Add(tabPageKochCurve);
+            kochCurveTab.Controls.Add(tabPageDragonCurve);
+            kochCurveTab.Controls.Add(tabPageSierpinskiCurve);
+            kochCurveTab.Location = new Point(3, 12);
+            kochCurveTab.Name = "kochCurveTab";
+            kochCurveTab.SelectedIndex = 0;
+            kochCurveTab.Size = new Size(980, 524);
+            kochCurveTab.TabIndex = 0;
+            // 
+            // tabPageKochCurve
+            // 
+            tabPageKochCurve.Controls.Add(groupBox2);
+            tabPageKochCurve.Location = new Point(4, 29);
+            tabPageKochCurve.Name = "tabPageKochCurve";
+            tabPageKochCurve.Padding = new Padding(3);
+            tabPageKochCurve.Size = new Size(972, 491);
+            tabPageKochCurve.TabIndex = 0;
+            tabPageKochCurve.Text = "Koch Curve";
+            tabPageKochCurve.UseVisualStyleBackColor = true;
+            // 
+            // tabPageDragonCurve
+            // 
+            tabPageDragonCurve.Location = new Point(4, 29);
+            tabPageDragonCurve.Name = "tabPageDragonCurve";
+            tabPageDragonCurve.Padding = new Padding(3);
+            tabPageDragonCurve.Size = new Size(972, 491);
+            tabPageDragonCurve.TabIndex = 1;
+            tabPageDragonCurve.Text = "Dragon Curve";
+            tabPageDragonCurve.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
             groupBox2.Controls.Add(tbLength);
+            groupBox2.Controls.Add(btnStart);
             groupBox2.Controls.Add(label2);
             groupBox2.Controls.Add(label1);
             groupBox2.Controls.Add(tbDeth);
-            groupBox2.Location = new Point(12, 235);
+            groupBox2.Location = new Point(6, 289);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(164, 196);
-            groupBox2.TabIndex = 2;
+            groupBox2.Size = new Size(296, 196);
+            groupBox2.TabIndex = 3;
             groupBox2.TabStop = false;
             groupBox2.Text = "Init Data";
             // 
@@ -67,6 +97,16 @@
             tbLength.Name = "tbLength";
             tbLength.Size = new Size(149, 27);
             tbLength.TabIndex = 3;
+            // 
+            // btnStart
+            // 
+            btnStart.Location = new Point(192, 144);
+            btnStart.Name = "btnStart";
+            btnStart.Size = new Size(94, 34);
+            btnStart.TabIndex = 0;
+            btnStart.Text = "Start";
+            btnStart.TextImageRelation = TextImageRelation.TextBeforeImage;
+            btnStart.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -93,27 +133,55 @@
             tbDeth.Size = new Size(149, 27);
             tbDeth.TabIndex = 0;
             // 
+            // tabPageSierpinskiCurve
+            // 
+            tabPageSierpinskiCurve.Controls.Add(groupBox1);
+            tabPageSierpinskiCurve.Location = new Point(4, 29);
+            tabPageSierpinskiCurve.Name = "tabPageSierpinskiCurve";
+            tabPageSierpinskiCurve.Padding = new Padding(3);
+            tabPageSierpinskiCurve.Size = new Size(972, 491);
+            tabPageSierpinskiCurve.TabIndex = 2;
+            tabPageSierpinskiCurve.Text = "Sierpinski Curve";
+            tabPageSierpinskiCurve.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            groupBox1.Location = new Point(6, 315);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(301, 170);
+            groupBox1.TabIndex = 0;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "initData Dragon";
+            // 
             // KochCurve
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(736, 443);
-            Controls.Add(groupBox2);
-            Controls.Add(btnStart);
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            ClientSize = new Size(999, 541);
+            Controls.Add(kochCurveTab);
             Name = "KochCurve";
-            Text = "Form1";
+            Text = "Main";
+            kochCurveTab.ResumeLayout(false);
+            tabPageKochCurve.ResumeLayout(false);
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
+            tabPageSierpinskiCurve.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Button btnStart;
+        private TabControl kochCurveTab;
+        private TabPage tabPageKochCurve;
         private GroupBox groupBox2;
         private TextBox tbLength;
+        private Button btnStart;
         private Label label2;
         private Label label1;
         private TextBox tbDeth;
+        private TabPage tabPageDragonCurve;
+        private TabPage tabPageSierpinskiCurve;
+        private GroupBox groupBox1;
     }
 }
